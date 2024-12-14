@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cstdlib> // For rand() and srand()
+#include <ctime> // For time()
+using namespace std;
+
+int main() {
+    // Seed the random number generator
+    srand(static_cast<unsigned int>(time(0)));
+
+    // Generate two random numbers between 1 and 100
+    int num1 = rand() % 100 + 1;
+    int num2 = rand() % 100 + 1;
+
+    // Display the math problem
+    cout << "Solve the following addition problem:" << endl;
+    cout << num1 << " + " << num2 << " = ?" << endl;
+
+    // Pause for the student to work on the problem
+    cout << "Press Enter when you're ready to see the answer.";
+    cin.get(); // Wait for the user to press Enter
+
+    // Display the correct answer
+    int sum = num1 + num2;
+    cout << "The correct answer is: " << num1 << " + " << num2 << " = " << sum << endl;
+
+    return 0;
+}
